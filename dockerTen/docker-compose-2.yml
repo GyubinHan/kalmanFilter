@@ -1,0 +1,152 @@
+version: '0'  
+
+
+
+     
+services:
+
+  data-prediction0-v2:
+    image: kalman10:v0.0.2
+    container_name: data-prediction0
+    restart: always
+    environment:
+      SOURCE_TOPIC: kalman-10-source
+      TARGET_TOPIC: kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP: kafka-0
+      KALMAN_NUMBER: 0
+      KALMAN_LOG: kalmanlog0.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+
+  data-prediction1:
+    image: kalman10:v0.0.2
+    container_name: data-prediction1
+    restart: always
+    environment:
+      SOURCE_TOPIC: kalman-10-source
+      TARGET_TOPIC: kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP: kafka-1
+      KALMAN_NUMBER: 1
+      KALMAN_LOG: kalmanlog1.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+
+  data-prediction2:
+    image: kalman10:v0.0.2
+    container_name: data-prediction2
+    restart: always
+    environment:
+      SOURCE_TOPIC: kalman-10-source
+      TARGET_TOPIC: kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP: kafka-2
+      KALMAN_NUMBER: 2
+      KALMAN_LOG: kalmanlog2.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+
+  data-prediction3:
+    image: kalman10:v0.0.2
+    container_name: data-prediction3
+    restart: always
+    environment:
+      SOURCE_TOPIC: kalman-10-source
+      TARGET_TOPIC: kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP: kafka-3
+      KALMAN_NUMBER: 3
+      KALMAN_LOG: kalmanlog3.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+  data-prediction4:
+    image: kalman10:v0.0.2
+    container_name: data-prediction4
+    restart: always
+    environment:
+      SOURCE_TOPIC: kalman-10-source
+      TARGET_TOPIC: kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP: kafka-4
+      KALMAN_NUMBER: 4
+      KALMAN_LOG: kalmanlog4.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+
+  data-prediction5:
+    image: kalman10:v0.0.2
+    container_name: data-prediction5
+    restart: always
+    environment:
+      SOURCE_TOPIC : kalman-10-source
+      TARGET_TOPIC : kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP : kafka-5
+      KALMAN_NUMBER : 5
+      KALMAN_LOG : kalmanlog5.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+
+  data-prediction6:
+    image: kalman10:v0.0.2
+    container_name: data-prediction6
+    restart: always
+    environment:
+      SOURCE_TOPIC : kalman-10-source
+      TARGET_TOPIC : kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP : kafka-6
+      KALMAN_NUMBER : 6
+      KALMAN_LOG : kalmanlog6.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+
+  data-prediction7:
+    image: kalman10:v0.0.2
+    container_name: data-prediction7
+    restart: always
+    environment:
+      SOURCE_TOPIC : kalman-10-source
+      TARGET_TOPIC : kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP : kafka-7
+      KALMAN_NUMBER : 7
+      KALMAN_LOG : kalmanlog7.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+  data-prediction8:
+    image: kalman10:v0.0.2
+    container_name: data-prediction8
+    restart: always
+    environment:
+      SOURCE_TOPIC : kalman-10-source
+      TARGET_TOPIC : kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP : kafka-8
+      KALMAN_NUMBER : 8
+      KALMAN_LOG : kalmanlog8.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/
+
+  data-prediction9:
+    image: kalman10:v0.0.2
+    container_name: data-prediction9
+    restart: always
+    environment:
+      SOURCE_TOPIC : kalman-10-source
+      TARGET_TOPIC : kalman-10-target 
+      KAFKA_URL : '172.16.28.218:19092,172.16.28.218:29092,172.16.28.218:39092,172.16.28.218:49092,172.16.28.218:59092'
+      CONSUMER_GROUP : kafka-9
+      KALMAN_NUMBER : 9
+      KALMAN_LOG : kalmanlog9.log
+    volumes:
+      - /Users/e8l-20210032/Documents/10dockerkalman/docker-volume/:/app/logFile/

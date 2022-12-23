@@ -1,0 +1,17 @@
+
+FROM python:3.9.12-slim
+# 디폴트 폴더 변경
+WORKDIR /app
+
+# Pip 패키지 설치
+COPY requirements5.txt requirements.txt
+# COPY kalmankafkafinalConsumer0.py /app/kalmankafkafinalConsumer.py
+COPY kalman10docker.py /app/kalman10docker.py
+COPY /docker-volume/  /app/logFile
+RUN pip install -r requirements.txt
+RUN pip install pykalman
+RUN pip install kafka-python
+
+
+CMD ["python","kalmankafkafinalConsumer.py"]
+
