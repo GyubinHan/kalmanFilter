@@ -39,7 +39,7 @@ def kalmanfilter(value):
                     observation_matrices = observation_matrix,
                     initial_state_mean = initial_state_mean)
 
-    kf1 = kf1.em(measurements, n_iter=5)
+    kf1 = kf1.em(measurements, n_iter=20)
     (smoothed_state_means, smoothed_state_covariances) = kf1.smooth(measurements)
 
     lst_return.append(smoothed_state_means)
@@ -121,31 +121,31 @@ def DictToJsonAppend(key,value,kalman_lst):
     return current_map
 
 
-# sourceTopic = os.environ['SOURCE_TOPIC']
+sourceTopic = os.environ['SOURCE_TOPIC']
 
-# targetTopic = os.environ['TARGET_TOPIC']
+targetTopic = os.environ['TARGET_TOPIC']
 
-# kafka_url = os.environ['KAFKA_URL'].split(',')
+kafka_url = os.environ['KAFKA_URL'].split(',')
 
-# consumer_group = os.environ['CONSUMER_GROUP']
+consumer_group = os.environ['CONSUMER_GROUP']
 
-# kalman_number = os.environ['KALMAN_NUMBER']
+kalman_number = os.environ['KALMAN_NUMBER']
 
-# kalman_log = os.environ['KALMAN_LOG']
-
-
+kalman_log = os.environ['KALMAN_LOG']
 
 
 
-# ##test
-sourceTopic =  'kalman-10-source'
-targetTopic =  'kalman-10-target'
-kafka_url =  ['172.16.28.218:19092','172.16.28.218:29092','172.16.28.218:39092','172.16.28.218:49092','172.16.28.218:59092']
-# print(type(kafka_url))
-# print(url.split(','))
-consumer_group =  'kafka-0'
-kalman_number =  0
-kalman_log = 'kalmanlog0.log'
+
+
+# # ##test
+# sourceTopic =  'kalman-10-source'
+# targetTopic =  'kalman-10-target'
+# kafka_url =  ['172.16.28.218:19092','172.16.28.218:29092','172.16.28.218:39092','172.16.28.218:49092','172.16.28.218:59092']
+# # print(type(kafka_url))
+# # print(url.split(','))
+# consumer_group =  'kafka-0'
+# kalman_number =  0
+# kalman_log = 'kalmanlog0.log'
 
 
 
